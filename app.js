@@ -2,20 +2,21 @@
 var pronoun = ['the','our'];
 var adj = ['great', 'big' ];
 var noun = ['jogger','racoon'];
-var arrExt = ['.net', '.us', '.io', '.es'];
+var arrExt = ['.net', '.com', '.io', '.es'];
 let pronombre;
 let adjetivo;
 let nombre;
 
 
-for (i=0; i<pronoun.length; i++) {
+for (let i=0; i<pronoun.length; i++) {
     pronombre = pronoun[i];
-    for (j=0; j<adj.length; j++) {
+    for (let j=0; j<adj.length; j++) {
         adjetivo = adj[j];
-        for (n=0; n<noun.length; n++) {
-            let ext = Math.floor(Math.random()*4);
+        for (let n=0; n<noun.length; n++) {
             nombre = noun[n];
-            console.log(pronombre + adjetivo + nombre + arrExt[ext]);
+            for (let m=0; m<arrExt.length;m++) {
+                console.log(pronombre + adjetivo + nombre + arrExt[m]);
+            }
         }
     }
 
